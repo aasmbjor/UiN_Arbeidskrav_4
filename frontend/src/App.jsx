@@ -81,7 +81,7 @@ function App() {
                 >
                   <use href="/icons.svg#discord-icon"></use>
                 </svg>
-                Discord . 
+                Discord
               </a>
             </li>
             <li>
