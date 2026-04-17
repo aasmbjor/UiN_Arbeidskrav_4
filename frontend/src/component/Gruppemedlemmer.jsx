@@ -1,0 +1,19 @@
+export default function Gruppemedlemmer(){
+    return(
+        <section>
+            <h2>Gruppemedlemmer</h2>
+                <article>
+                    <h3>Chris</h3>
+                </article>
+                <article>
+                    <h3>Ole</h3>
+                </article>
+                <article>
+                    <h3>Audun</h3>
+                </article>
+                <article>
+                    <h3>Åsmund</h3>
+                </article>
+        </section>
+    )
+}
