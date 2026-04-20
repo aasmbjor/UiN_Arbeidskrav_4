@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import Layout from './component/Layout'
-import Gruppemedlemmer from './component/Gruppemedlemmer'
 import Frontpage from './component/Frontpage'
 
 function App() {
