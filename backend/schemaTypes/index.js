@@ -1,2 +1,3 @@
 import arbeidskrav from "./arbeidskrav"
-export const schemaTypes = [arbeidskrav]
+import gruppemedlemmer from "./gruppemedlemmer"
+export const schemaTypes = [arbeidskrav, gruppemedlemmer]
