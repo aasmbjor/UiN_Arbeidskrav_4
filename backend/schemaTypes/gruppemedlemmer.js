@@ -1,6 +1,6 @@
 const gruppemedlemmer = {
-    name: "Gruppemedlemmer",
-    title: "UiN Gruppemedlemmer",
+    name: "gruppemedlemmer",
+    title: "Gruppemedlemmer",
     type: "document",
     fields: [
         {
