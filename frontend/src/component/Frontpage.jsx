@@ -1,5 +1,9 @@
+import Gruppemedlemmer from "./Gruppemedlemmer";
+
 export default function Frontpage(){
     return(
-        <h2>Forside</h2>
+        <main>
+        <Gruppemedlemmer/>
+      </main>
     )
 }
