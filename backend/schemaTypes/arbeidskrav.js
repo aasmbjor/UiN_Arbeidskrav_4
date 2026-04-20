@@ -6,12 +6,12 @@ const arbeidskrav = {
         {
             name: "ak_navn",
             title: "ak_tittel",
-            type: "string"
+            type: "text"
         },
         {
             name: "ak_info",
             title: "ak_informasjon",
-            type: "string"
+            type: "text"
         }
     ]
 }
