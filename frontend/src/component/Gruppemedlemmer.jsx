@@ -1,19 +1,27 @@
+import { useEffect, useState } from 'react'
+import client from '../helpers/client'
+import Medlemskort from './Medlemskort'
+import { Link } from 'react-router-dom'
 export default function Gruppemedlemmer(){
-    return(
-        <section>
-            <h2>Gruppemedlemmer</h2>
-                <article>
-                    <h3>Chris</h3>
-                </article>
-                <article>
-                    <h3>Ole</h3>
-                </article>
-                <article>
-                    <h3>Audun</h3>
-                </article>
-                <article>
-                    <h3>Åsmund</h3>
-                </article>
-        </section>
-    )
+    const [sanityMedlem, setSanityMedlem] = useState(null)
+
+    useEffect(() => {
+      async function fetchAllMedlemmer() {
+        const allMedlemmer = await client.fetch("*[_type == 'gruppemedlemmer']{_id, navn, epost, studie, bilde, 'imageURL': bilde.asset->url}")
+        setSanityMedlem(allMedlemmer)
+      }
+
+      fetchAllMedlemmer()
+    }, [])
+
+    console.log(sanityMedlem)
+
+    return (
+    <section id="product-list">
+      {sanityMedlem?.map((m) => (<Link key={m._id} to={"/"}> <Medlemskort key={m._id} m={m}/></Link>))}
+    </section>)
+
+
+
+    
 }
