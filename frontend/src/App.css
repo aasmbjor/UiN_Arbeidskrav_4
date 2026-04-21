@@ -78,6 +78,11 @@ a{
 /* Gemini chat for CSS: https://gemini.google.com/share/9dce5eb80a50 */
 
 /* HOVEDINNHOLD */
+.undertitle{
+  grid-column: 1 / -1;
+  margin-top: 1rem;
+  text-transform: uppercase;    
+}
 
 #member-list{
   display: grid;
@@ -86,12 +91,6 @@ a{
   max-width: fit-content;
   margin: 0 auto;
   margin-bottom: 2rem;
-
-  h2{
-    grid-column: 1 / -1;
-    margin-top: 1rem;
-    text-transform: uppercase;
-  }
 
   .member-card{
     border: 2px solid var(--nav-accent);
