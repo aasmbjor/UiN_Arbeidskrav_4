@@ -110,7 +110,7 @@ a{
   }
 }
 
-#arbeidskrav-liste{
+.arbeidskrav-liste{
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -129,4 +129,8 @@ a{
       color: var(--nav-bg);
     }
   }
+}
+.oblig {
+  padding-top: 1rem;
+  justify-content: center;
 }
