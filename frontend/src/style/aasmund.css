@@ -1,0 +1,45 @@
+.medlem-container {
+    max-width: 900px;
+    margin: 2rem;
+    padding: 2rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.medlem-container h1 {
+    font-size: 45px;
+    color: #ffffff;
+}
+
+.profilbilde {
+    width: 100%;
+    max-width: 600px; 
+    height: auto; 
+    border-radius: 8px; 
+    border: 2px solid #000;
+    margin: 1rem;
+}
+
+.omMeg {
+    margin-bottom: 4rem;
+    text-align: left;
+}
+
+.omMeg h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.omMeg p {
+    white-space: pre-line; 
+    color: #ffffff;
+}
+
+.arbeidskrav3 {
+    margin-top: 2rem;
+}
+
+.arbeidskrav3 img {
+    width: 100%;
+    height: auto;
+} 
