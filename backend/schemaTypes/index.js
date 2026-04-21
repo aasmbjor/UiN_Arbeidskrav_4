@@ -1,3 +1,4 @@
 import arbeidskrav from "./arbeidskrav"
 import gruppemedlemmer from "./gruppemedlemmer"
-export const schemaTypes = [arbeidskrav, gruppemedlemmer]
+import omoss from "./omoss"
+export const schemaTypes = [arbeidskrav, gruppemedlemmer, omoss]
