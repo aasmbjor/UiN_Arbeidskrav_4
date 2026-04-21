@@ -11,6 +11,10 @@
     color: #ffffff;
 }
 
+.medlem-container a {
+    color: #287ea7;
+}
+
 .profilbilde {
     width: 100%;
     max-width: 600px; 
