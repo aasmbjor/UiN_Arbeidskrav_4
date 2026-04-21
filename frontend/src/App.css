@@ -81,7 +81,8 @@ a{
 .undertitle{
   grid-column: 1 / -1;
   margin-top: 1rem;
-  text-transform: uppercase;    
+  text-transform: uppercase;
+  text-align: center;    
 }
 
 #member-list{
@@ -104,6 +105,27 @@ a{
     h3{
       margin: 0.5rem;
       text-decoration: none !important;
+      color: var(--nav-bg);
+    }
+  }
+}
+
+#arbeidskrav-liste{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: left;
+
+  .oblig-card{
+    border: 2px solid var(--nav-text);
+    border-radius: 8px;
+    padding: 1rem;
+
+
+    h3{
+      margin: 0;
       color: var(--nav-bg);
     }
   }
