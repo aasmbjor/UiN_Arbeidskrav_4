@@ -16,6 +16,9 @@ export default function Chris() {
 
     return (
         <article className="profilkort-chris">
+            {/* */}
+            {sanityMedlem && (
+                <>
             <figure>
                 {minProfil && (
                     <img
@@ -25,12 +28,24 @@ export default function Chris() {
                 )}
             </figure>
             <section>
-                <h3>Chris Haraldsen</h3>
-                <p><strong>Studie: </strong>Bachelor i Informasjonssystemer</p>
+                <h3>{sanityMedlem.Chris}</h3>
+                <p><strong>Studie: </strong>{sanityMedlem.studie}</p>
                 <address>
-                    E-post: <a href="mailto:chrisanh@hiof.no">chrisanh@hiof.no</a>
+                    E-post: <a href={`mailto:${sanityMedlem.epost}`}>{sanityMedlem.epost}</a>
                 </address>
+                {/*Om meg feltet */}
+                {sanityMedlem.omMeg && (
+                    <p><strong>Om meg: </strong>{sanityMedlem.omMeg}</p>
+                )}
             </section>
+            {sanityMedlem.ak1URL && (
+                <figure classname="arbeidskrav-bilde">
+                    <figcaption>Arbeidskrav 2</figcaption>
+                    <img src={sanityMedlem.ak1URL} alt="screenshot av ak2" />
+                </figure>
+            )}
+            </>
+            )}
         </article> 
     )
 }
