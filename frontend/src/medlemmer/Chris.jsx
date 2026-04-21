@@ -7,7 +7,7 @@ export default function Chris() {
     useEffect(() => {
       /* Henter alle gruppemedlemmer fra Sanity databasen */
       async function fetchChris() {
-        const allMedlemmer = await client.fetch("*[_type == 'gruppemedlemmer' && navn == 'Chris Haraldsen']{_id, navn, epost, studie, omMeg, bilde, arbeidskravbilde1, arbeidskravbilde2, 'imageURL': bilde.asset->url}")
+        const allMedlemmer = await client.fetch("*[_type == 'gruppemedlemmer' && navn == 'Chris Haraldsen']{_id, navn, epost, studie, omMeg, bilde, arbeidskravbilde2, arbeidskravbilde3, 'imageURL': bilde.asset->url}")
         setSanityMedlem(Chris)
       }
 
