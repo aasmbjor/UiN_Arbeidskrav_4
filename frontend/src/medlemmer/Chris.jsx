@@ -1,40 +1,57 @@
 import { useEffect, useState } from 'react'
 import client from '../helpers/client'
+import './style/Chrisstyle.css'
 
 export default function Chris() {
-    const [minProfil, setMinProfil] = useState(null)
+    const [sanityMedlem, setSanityMedlem] = useState(null)
 
     useEffect(() => {
         async function fetchChris() {
-            //Henter fra sanity og groq spørringen min.
-            const data = await client.fetch(
-                `*[_type == "gruppemedlemmer" && navn == "Chris Haraldsen"][0]{
-                    "imageURL": bilde.asset->url
-                }`
-            )
-            setMinProfil(data)
+            const data = await client.fetch(`*[_type == 'gruppemedlemmer' && navn == 'Chris Haraldsen'][0]{
+                navn, 
+                epost, 
+                studie, 
+                omMeg, 
+                'imageURL': bilde.asset->url, 
+                'ak1URL': arbeidskravbilde1.asset->url,
+                'ak2URL': arbeidskravbilde2.asset->url
+            }`)
+            setSanityMedlem(data)
         }
- 
         fetchChris()
     }, [])
 
     return (
         <article className="profilkort-chris">
-            <figure>
-                {minProfil && (
-                    <img
-                        src={minProfil.imageURL}
-                        alt="Chris"
-                    />
-                )}
-            </figure>
-            <section>
-                <h3>Chris Haraldsen</h3>
-                <p><strong>Studie: </strong>Bachelor i Informasjonssystemer</p>
-                <address>
-                    E-post: <a href="mailto:chrisanh@hiof.no">chrisanh@hiof.no</a>
-                </address>
-            </section>
-        </article> 
+            {sanityMedlem && (
+                <> 
+                    <figure>
+                        <img src={sanityMedlem.imageURL} alt={sanityMedlem.navn} />
+                    </figure>
+                    <section>
+                        <h3>{sanityMedlem.navn}</h3>
+                        <p><strong>Studie: </strong>{sanityMedlem.studie}</p>
+                        <address>
+                            E-post: <a href={`mailto:${sanityMedlem.epost}`}>{sanityMedlem.epost}</a>
+                        </address>
+                        {sanityMedlem.omMeg && <p><strong>Om meg: </strong>{sanityMedlem.omMeg}</p>}
+                    </section>
+
+                    {sanityMedlem.ak1URL && (
+                        <figure className="arbeidskrav-bilde">
+                            <figcaption>Arbeidskrav 2</figcaption>
+                            <img src={sanityMedlem.ak1URL} alt="Screenshot av designet mitt for arbeidskrav 2" />
+                        </figure>
+                    )}
+
+                    {sanityMedlem.ak2URL && (
+                        <figure className="arbeidskrav-bilde">
+                            <figcaption>Arbeidskrav 3</figcaption>
+                            <img src={sanityMedlem.ak2URL} alt="screenshot av mitt design for arbeidskrav 3" />
+                        </figure>
+                    )}
+                </> 
+            )}
+        </article>
     )
 }

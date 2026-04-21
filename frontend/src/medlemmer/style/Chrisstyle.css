@@ -1,0 +1,61 @@
+.profilkort-chris {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 50px;
+  align-items: start;
+  background-color: #f9f9f9;
+  padding: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  color: #222;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.profilkort-chris figure {
+  margin: 0;
+}
+
+.profilkort-chris > figure > img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.profilkort-chris section {
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.profilkort-chris section strong {
+  font-weight: 700;
+  color: #111;
+}
+
+.profilkort-chris a {
+  color: #0056b3;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.arbeidskrav-bilde {
+  grid-column: 1 / -1;
+  margin-top: 30px;
+  border-top: 1px solid #ddd;
+  padding-top: 30px;
+}
+
+.arbeidskrav-bilde figcaption {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.arbeidskrav-bilde img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}

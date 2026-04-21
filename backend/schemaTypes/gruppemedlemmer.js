@@ -42,12 +42,12 @@ const gruppemedlemmer = {
         },
         {
             name: "arbeidskravbilde1",
-            title: "Arbeidskrav 1 Bilde",
+            title: "Arbeidskrav 2 Bilde",
             type: "image"
         },
         {
             name: "arbeidskravbilde2",
-            title: "Arbeidskrav 2 Bilde",
+            title: "Arbeidskrav 3 Bilde",
             type: "image"
         }
     ]
