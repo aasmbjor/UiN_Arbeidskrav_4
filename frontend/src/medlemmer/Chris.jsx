@@ -38,10 +38,18 @@ export default function Chris() {
                     <p><strong>Om meg: </strong>{sanityMedlem.omMeg}</p>
                 )}
             </section>
-            {sanityMedlem.ak1URL && (
+            {/*Henter ut bilde fra AK 2 */}
+            {sanityMedlem.ak2URL && (
                 <figure classname="arbeidskrav-bilde">
                     <figcaption>Arbeidskrav 2</figcaption>
                     <img src={sanityMedlem.ak1URL} alt="screenshot av ak2" />
+                </figure>
+            )}
+            {/*Henter ut AK3 */}
+            {sanityMedlem.ak3URL && (
+                <figure className="arbeidskrav-bilde">
+                    <figcaption>Arbeidskrav 3</figcaption>
+                    <img src={sanityMedlem.ak3URL} alt="screenshot av ak3" />
                 </figure>
             )}
             </>
