@@ -2,20 +2,16 @@ import { useEffect, useState } from 'react'
 import client from '../helpers/client'
 
 export default function Chris() {
-    const [minProfil, setMinProfil] = useState(null)
+    const [sanityMedlem, setSanityMedlem] = useState(null)
 
     useEffect(() => {
-        async function fetchChris() {
-            //Henter fra sanity og groq spørringen min.
-            const data = await client.fetch(
-                `*[_type == "gruppemedlemmer" && navn == "Chris Haraldsen"][0]{
-                    "imageURL": bilde.asset->url
-                }`
-            )
-            setMinProfil(data)
-        }
- 
-        fetchChris()
+      /* Henter alle gruppemedlemmer fra Sanity databasen */
+      async function fetchChris() {
+        const allMedlemmer = await client.fetch("*[_type == 'gruppemedlemmer' && navn == 'Chris Haraldsen']{_id, navn, epost, studie, omMeg, bilde, arbeidskravbilde1, arbeidskravbilde2, 'imageURL': bilde.asset->url}")
+        setSanityMedlem(Chris)
+      }
+
+      fetchChris()
     }, [])
 
     return (
