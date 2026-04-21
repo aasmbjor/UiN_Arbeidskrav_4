@@ -6,7 +6,7 @@ export default function Chris() {
 
     useEffect(() => {
         async function fetchChris() {
-            // Henter fra Sanity
+            //Henter fra sanity og groq spørringen min.
             const data = await client.fetch(
                 `*[_type == "gruppemedlemmer" && navn == "Chris Haraldsen"][0]{
                     "imageURL": bilde.asset->url
