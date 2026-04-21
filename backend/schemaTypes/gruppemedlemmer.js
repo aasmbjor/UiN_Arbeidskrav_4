@@ -34,6 +34,21 @@ const gruppemedlemmer = {
             name: "bilde",
             title: "Bilde",
             type: "image"
+        },
+        {
+            name: "omMeg",
+            title: "Om meg",
+            type: "text"
+        },
+        {
+            name: "arbeidskravbilde1",
+            title: "Arbeidskrav 1 Bilde",
+            type: "image"
+        },
+        {
+            name: "arbeidskravbilde2",
+            title: "Arbeidskrav 2 Bilde",
+            type: "image"
         }
     ]
 }
