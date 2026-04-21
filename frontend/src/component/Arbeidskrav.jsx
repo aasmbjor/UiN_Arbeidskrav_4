@@ -8,7 +8,7 @@ export default function Arbeidskrav(){
 
     useEffect(()=>{
         /* Henter alle arbeidskrav fra Sanity databasen */
-        const query = "*[_type == 'arbeidskrav']{ak_navn, ak_info}"
+        const query = "*[_type == 'arbeidskrav']{ak_navn, ak_info, slug}"
         async function fetchAllArbeidskrav() {
         const allArbeidskrav = await client.fetch(query)
         setOblig(allArbeidskrav)
@@ -18,9 +18,14 @@ export default function Arbeidskrav(){
     }, [])
     console.log(oblig)
     return(
-        <section id="arbeidskrav-liste">
+        <section className="arbeidskrav-liste">
             <h2 className="undertitle">Arbeidskrav</h2> {/* Lagt til overskrift for listing av gruppemedlemmer */}
-            {oblig?.map((a, index) => (<Link key={index} to={"/"}> <Oblig a={a}/></Link>))}
+            {oblig?.map((a, index) => (
+                <Link key={index} to={"/arbeidskrav/" + a.slug.current}>
+                    <article className="oblig-card">
+                    <h3>{a.ak_navn}</h3>
+                    </article>
+                </Link>))}
         </section>
     )
 }
