@@ -9,6 +9,7 @@ import Audun from './medlemmer/Audun'
 import Aasmund from './medlemmer/Aasmund'
 import OmOss from './Pages/OmOss'
 import Oblig from './component/Oblig'
+import Akinfo from './component/Akinfo'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,7 @@ function App() {
         <Route index element={<Frontpage/>}/>
         <Route path='/om-oss' element={<OmOss/>}/>
         <Route path="/arbeidskrav" element={<Oblig />}/>
+        <Route path="/arbeidskrav/:slug" element={<Akinfo />}/>
         <Route path='/medlem/haraldsen' element={<Chris/>}/>
         <Route path='/medlem/bovolden' element={<Ole/>}/>
         <Route path='/medlem/henden' element={<Audun/>}/>
