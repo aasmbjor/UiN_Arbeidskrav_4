@@ -1,13 +1,6 @@
-
-
-
-
-export default function Ole(){
-    return(
-        <main>
-            <h2>Ole sin side</h2>
-        </main>
-    )
+<<<<<<<<< Temporary merge branch 1
+=========
+export default function Ole() {
+    return
 }
-
-
+>>>>>>>>> Temporary merge branch 2
