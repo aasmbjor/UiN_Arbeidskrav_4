@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import client from '../helpers/client'
+import './style/Chrisstyle.css'
 
 export default function Chris() {
     const [sanityMedlem, setSanityMedlem] = useState(null)
@@ -38,15 +39,15 @@ export default function Chris() {
 
                     {sanityMedlem.ak1URL && (
                         <figure className="arbeidskrav-bilde">
-                            <figcaption>Arbeidskrav 1</figcaption>
-                            <img src={sanityMedlem.ak1URL} alt="AK1" />
+                            <figcaption>Arbeidskrav 2</figcaption>
+                            <img src={sanityMedlem.ak1URL} alt="Screenshot av designet mitt for arbeidskrav 2" />
                         </figure>
                     )}
 
                     {sanityMedlem.ak2URL && (
                         <figure className="arbeidskrav-bilde">
-                            <figcaption>Arbeidskrav 2</figcaption>
-                            <img src={sanityMedlem.ak2URL} alt="AK2" />
+                            <figcaption>Arbeidskrav 3</figcaption>
+                            <img src={sanityMedlem.ak2URL} alt="screenshot av mitt design for arbeidskrav 3" />
                         </figure>
                     )}
                 </> 
