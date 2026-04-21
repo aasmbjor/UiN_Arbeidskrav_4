@@ -7,6 +7,7 @@ import Chris from './medlemmer/Chris'
 import Ole from './medlemmer/Ole'
 import Audun from './medlemmer/Audun'
 import Aasmund from './medlemmer/Aasmund'
+import OmOss from './Pages/OmOss'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
     <Layout>
       <Routes>
         <Route index element={<Frontpage/>}/>
+        <Route path='/om-oss' element={<OmOss/>}/>
         <Route path='/medlem/haraldsen' element={<Chris/>}/>
         <Route path='/medlem/bovolden' element={<Ole/>}/>
         <Route path='/medlem/henden' element={<Audun/>}/>
