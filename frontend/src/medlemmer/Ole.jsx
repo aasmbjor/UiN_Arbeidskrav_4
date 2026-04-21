@@ -1,5 +1,3 @@
-
-
 export default function Ole(){
     return(
         <main>
@@ -7,5 +5,3 @@ export default function Ole(){
         </main>
     )
 }
-
-
