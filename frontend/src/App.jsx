@@ -6,7 +6,7 @@ import Frontpage from './Pages/Frontpage'
 import Chris from './medlemmer/Chris'
 import Ole from './medlemmer/Ole'
 import Audun from './medlemmer/Audun'
-import Aasmund from './medlemmer/Chris'
+import Aasmund from './medlemmer/Aasmund'
 
 function App() {
   const [count, setCount] = useState(0)
