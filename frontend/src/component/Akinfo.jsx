@@ -17,8 +17,10 @@ export default function Akinfo(){
       fetchAllArbeidskrav(parameters.slug)
     }, [parameters.slug])
     
-    console.log(parameters)
-    console.log(oblig)
+    // console.log(parameters)
+    // console.log(oblig)
+
+    /* Link til Gemini samtale for smålig hjelp til koden: https://gemini.google.com/share/254f4bdcd768 */
 
     return(
         <section className="arbeidskrav-info">
