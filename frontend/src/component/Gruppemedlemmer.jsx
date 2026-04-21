@@ -19,7 +19,7 @@ export default function Gruppemedlemmer(){
 
     return (
     <section id="member-list">
-      <h2>Gruppemedlemmer</h2> {/* Lagt til overskrift for listing av gruppemedlemmer */}
+      <h2 className="undertitle">Gruppemedlemmer</h2> {/* Lagt til overskrift for listing av gruppemedlemmer */}
       {sanityMedlem?.map((m) => (<Link key={m._id} to={"/"}> <Medlemskort key={m._id} m={m}/></Link>))}
     </section>)
 
