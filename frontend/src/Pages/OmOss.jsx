@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import client from "../helpers/client"
+import '../style/omoss.css'
 
 export default function OmOss(){
   const [sanityAbout, setSanityAbout] = useState(null)
