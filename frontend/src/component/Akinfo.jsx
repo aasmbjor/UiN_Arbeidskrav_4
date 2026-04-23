@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import client from "../helpers/client"
+import '../style/omArbeidskrav.css'
 
 export default function Akinfo(){
     const parameters = useParams()
