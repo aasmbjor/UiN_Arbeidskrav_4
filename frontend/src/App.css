@@ -144,11 +144,11 @@ a{
 /* Unike artikkel-profiler */
 .profil-henden{
   font-family: "titillium web", sans-serif;
-  font-weight: 400;
   text-transform: uppercase;
 
   img{
-    border-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     border-bottom: 2px solid var(--nav-border);
   }
 }
