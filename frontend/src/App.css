@@ -158,3 +158,15 @@ a{
     text-align: left;
   }
 }
+
+/* Unike artikkel-profiler */
+.profil-henden{
+  font-family: "titillium web", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  img{
+    border-radius: 8px;
+    border-bottom: 2px solid var(--nav-border);
+  }
+}
