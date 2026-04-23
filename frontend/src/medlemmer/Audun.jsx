@@ -134,7 +134,7 @@ export default function Audun(){
                 </section>
                 <section className="ahv-info">
                     <h2>{profil?.navn}</h2>
-                    <p><b>E-post:</b> <a href="mailto:ahhenden@hiof.no">{profil?.epost}</a></p>
+                    <p><b>E-post:</b> <a href={`mailto:${profil?.epost}`}>{profil?.epost}</a></p>
                     <p><b>Studie:</b> {profil?.studie}</p>
                 </section>
             </article>
