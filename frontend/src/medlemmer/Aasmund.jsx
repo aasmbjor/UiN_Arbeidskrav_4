@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import client from "../helpers/client"
-import '../style/aasmund.css'
+import './style/aasmund.css'
 
 export default function Medlem() {
   const [sanityMedlem, setSanityMedlem] = useState(null)
@@ -23,7 +23,7 @@ export default function Medlem() {
     }
 
     fetchMedlem()
-  }, []);
+  }, [])
 
   return (
     <article className="medlem-container">

@@ -19,7 +19,12 @@ const omOss = {
                                     .replace(/\s+/g, '-')
                                     .slice(0, 100)
             }
-        }
+        },
+        {
+            name: "bilde",
+            title: "Bilde",
+            type: "image"
+        },
     ]
 }
 

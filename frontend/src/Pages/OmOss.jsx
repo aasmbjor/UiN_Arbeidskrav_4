@@ -1,9 +1,25 @@
-export default function OmOss(){
+import { useEffect, useState } from "react"
+import client from "../helpers/client"
 
-    return(
-    <main>
-        <h2>Om Oss</h2>
-        <p>Her kommer det mer info om oss</p>
-    </main>
-    )
+export default function OmOss(){
+  const [sanityAbout, setSanityAbout] = useState(null)
+
+  useEffect(() => {
+    async function fetchAbout() {
+        const data = await client.fetch("*[_type == 'about'][0]{_id, about, bilde, 'imageURL': bilde.asset->url}")
+        setSanityAbout(data)
+    }
+    fetchAbout()
+  }, [])
+
+  console.log(sanityAbout)
+  return(
+      <article className="about-container">
+          <h1>Om Oss</h1>
+          {sanityAbout?.imageURL && (<img src={sanityAbout.imageURL} alt="" className="gruppebilde"/>)}
+          <p>{sanityAbout?.about}</p>
+      </article>
+  )
 }
+
+
