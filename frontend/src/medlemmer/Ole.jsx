@@ -38,7 +38,7 @@ export default function Ole(){
             </section>
             <section className="tileggsinfo">
                 <h3>Mer informasjon</h3>
-                <p>Her kan du legge til mer tekst senere...</p>
+                <p>Utklipp av arbeidskrav 2 og 3:</p>
                 
                 <section className="bilde-grid">
                     <figure>
