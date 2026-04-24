@@ -139,16 +139,3 @@ a{
 .oblig {
   padding-top: 1rem;
 }
-
-
-/* Unike artikkel-profiler */
-.profil-henden{
-  font-family: "titillium web", sans-serif;
-  text-transform: uppercase;
-
-  img{
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-bottom: 2px solid var(--nav-border);
-  }
-}
